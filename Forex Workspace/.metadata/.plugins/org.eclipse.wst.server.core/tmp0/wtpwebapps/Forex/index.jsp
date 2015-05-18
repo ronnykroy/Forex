@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<title>Forex Simulator</title>
+<script language="javascript" type="text/javascript">
+	$("loginform")
+			.submit(
+					function() {
+						if ($('#loading_image').length == 0) { //is the image on the form yet?
+							// add it just before the submit button
+							$(':submit')
+									.before(
+											'<img src="/images/load_one.gif" style="display: none;" alt="loading" id="loading_image">')
+						}
+						$('#loading_image').show(); // show the animated image    
+						$(':submit', this).attr('disabled', 'disabled'); // disable double submits
+						return true; // allow regular form submission
+					});
+</script>
+<script type="text/javascript">
+	function dil(form) {
+		for (var i = 0; i < form.elements.length; i++) {
+			if (form.elements[i].value == "") {
+				alert("Please Enter All Details");
+				document.loginForm.rollNbr.focus();
+				return false;
+			}
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<div id="templatemo_header_wrapper">
+		<div id="templatemo_header"></div>
+		<!-- end of templatemo_header -->
+	</div>
+	<div id="site_title">Forex Simulator</div>
+	<!-- end of templatemo_menu_wrapper -->
+	<div align="center" id="templatemo_content">
+		<div class="content_box">
+
+			<form name=loginForm onSubmit="return dil(this)"
+				action="TransactionRH" method="post">
+				<table>
+					<tr>
+						<td>USER NAME:</td>
+						<td><input type="text" name="rollNbr" maxlength="5"
+							id="rollNbr" /></td>
+					</tr>
+					<tr>
+						<td>PASSWORD:</td>
+						<td><input type="password" name="password" /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Submit" /> <INPUT TYPE=RESET
+							VALUE="CLEAR"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<!-- end of content -->
+	</div>
+	<!-- end of content -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+INDEX VERSION 1.3+E:\Forex Workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1180758558.index
+3451494892.index
+2496586899.index
+110026195.index
+333289023.index
+1334720713.index
+1441233801.index
+3823059371.index

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Forex</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description>Transaction Component</description>
+		<display-name>CorpusHome</display-name>
+		<servlet-name>TransactionRH</servlet-name>
+		<servlet-class>transactionRH.TransactionRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TransactionRH</servlet-name>
+		<url-pattern>/TransactionRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Transaction BUY Component</description>
+		<display-name>BUY Currency</display-name>
+		<servlet-name>TransactionBuyRH</servlet-name>
+		<servlet-class>transactionRH.TransactionBuyRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TransactionBuyRH</servlet-name>
+		<url-pattern>/TransactionBuyRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Transaction BUY Component</description>
+		<display-name>BUY Currency</display-name>
+		<servlet-name>TransactionSellRH</servlet-name>
+		<servlet-class>transactionRH.TransactionSellRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TransactionSellRH</servlet-name>
+		<url-pattern>/TransactionSellRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Forward Rate Getter</description>
+		<display-name>Forward Rates</display-name>
+		<servlet-name>ForwardRateRH</servlet-name>
+		<servlet-class>transactionRH.ForwardRateRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ForwardRateRH</servlet-name>
+		<url-pattern>/ForwardRateRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Reset Password</description>
+		<display-name>Reset Password</display-name>
+		<servlet-name>ResetPwdRH</servlet-name>
+		<servlet-class>instructorRH.ResetPwdRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResetPwdRH</servlet-name>
+		<url-pattern>/ResetPwdRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Transaction Summary</description>
+		<display-name>Transaction Summary</display-name>
+		<servlet-name>TnxSummaryRH</servlet-name>
+		<servlet-class>transactionRH.TnxSummaryRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TnxSummaryRH</servlet-name>
+		<url-pattern>/TnxSummaryRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Evaluate Performance</description>
+		<display-name>Evaluate Performance</display-name>
+		<servlet-name>EvaluatePerformance</servlet-name>
+		<servlet-class>transactionRH.EvaluatePerformance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EvaluatePerformance</servlet-name>
+		<url-pattern>/EvaluatePerformance</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>EvaluateSummaryRH</description>
+		<display-name>EvaluateSummaryRH</display-name>
+		<servlet-name>EvaluateSummaryRH</servlet-name>
+		<servlet-class>transactionRH.EvaluateSummaryRH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EvaluateSummaryRH</servlet-name>
+		<url-pattern>/EvaluateSummaryRH</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>CreateNewUser</description>
+		<display-name>CreateNewUser</display-name>
+		<servlet-name>CreateNewUser</servlet-name>
+		<servlet-class>instructorRH.CreateNewUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateNewUser</servlet-name>
+		<url-pattern>/CreateNewUser</url-pattern>
+	</servlet-mapping>
+</web-app>

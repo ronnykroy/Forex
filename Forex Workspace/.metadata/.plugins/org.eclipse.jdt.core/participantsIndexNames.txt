@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+E:\Forex Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1180758558.index
+\Forex\src
